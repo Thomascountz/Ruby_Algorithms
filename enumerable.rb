@@ -103,9 +103,7 @@ module Enumerable
     	result
     end
     	
-    def multiply_els
-    	self.my_inject {|result, element| result * element}
-    end
+    def multiply_els ; self.my_inject {|result, element| result * element} ; end
     
 end
 
