@@ -16,14 +16,11 @@ class Game
     puts "Please choose a combination of four of the following colors."
     puts "Notice: repeats are valid"
     puts "#{@code.code_elements}"
+
     
     until @board.num_of_turns == @board.allowed_turns or @board.game_won?(code, current_guess) do
       
-      # puts "---DEBUG---"
-      # puts "CODE: #{code.inspect}"
-      # puts "GUESS: #{current_guess.inspect}"
-      # puts "CURRENT TURN: #{@board.num_of_turns}"
-      # puts "---DEBUG---"
+      #record_log(code, current_guess)
       
       puts "\nPlease enter your guess.\n"
       current_guess = @player.input
@@ -40,6 +37,9 @@ class Game
       puts "Congratulations, you solved it in #{@board.num_of_turns} turns!"
     elsif @board.num_of_turns == @board.allowed_turns
       puts "Sorry, you were unable to guess the code: #{code}."
+      
+      #record_log(code, current_guess)
+
     end
   end
   
@@ -164,6 +164,16 @@ class Game
       
     end
     
+  end
+  
+  def record_log(code, current_guess)
+    f = File.open("log.txt", "a")
+    f.puts Time.now
+    f.puts "CURRENT TURN: #{@board.num_of_turns}"
+    f.puts "CODE: #{code.inspect}"
+    f.puts "GUESS: #{current_guess.inspect}"
+    f.puts "\n\n"
+    f.close
   end
   
 end
