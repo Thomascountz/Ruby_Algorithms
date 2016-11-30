@@ -1,0 +1,9 @@
+--- !ruby/object:Game
+word: 'PRIVATE
+
+'
+guessed_letters:
+- Z
+- Q
+guesses_left: 6
+display: PR____
