@@ -44,6 +44,8 @@ def get_code(request)
       return "400 Bad Request"
   end
 
+end
+
 def get_body(request)
   
   path = request[:resource][1..-1]
@@ -64,8 +66,6 @@ def get_body(request)
   body.join
 end
 
-  
-end
 
 def get_resource(resource, new_line = "")
   f = File.open(resource)
