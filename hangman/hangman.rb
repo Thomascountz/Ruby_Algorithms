@@ -62,9 +62,9 @@ class Game
   
   def play
     
-    puts "---DEBUG---"
-    puts @word
-    puts "---DEBUG---"
+    # puts "---DEBUG---"
+    # puts @word
+    # puts "---DEBUG---"
     
     until game_won? or @guesses_left == 0
     
