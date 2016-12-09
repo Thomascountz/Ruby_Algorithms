@@ -4,6 +4,7 @@ def merge_sort(arr)
   b = a[0..(arr.length/2)-1].dup
   c = a[(arr.length/2)..-1].dup
   
+#helper method here to keep the code DRY?
 
   if b.length > 1 
     b = merge_sort(b)
@@ -28,6 +29,8 @@ def merge_sort(arr)
     end
     a_index += 1
   end
+
+#helper method here to keep the code DRY?
   
   while b_index == b.length && a_index < a.length do
     a[a_index] = c[c_index]
