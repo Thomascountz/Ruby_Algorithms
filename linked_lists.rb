@@ -2,7 +2,6 @@
 # Each node contains a data element and a pointer to the next Node
 # A head Node is the first node; a tail Node is the last
 # [head NODE] --> [Node] --> [(n)Nodes] --> [tail Node]
-
 class LinkedList
   attr_reader :head, :tail
 
@@ -103,7 +102,7 @@ class LinkedList
   class Node
     attr_accessor :value, :next_node
 
-    def initialize(args = {}) 
+    def initialize(args = {})
       @value = args.fetch(:value, nil)
       @next_node = args.fetch(:next_node, nil)
     end
