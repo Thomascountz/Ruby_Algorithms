@@ -1,7 +1,3 @@
-def reload
-    load "./enumerable.rb"
-end
-
 module Enumerable
     
     def my_each
@@ -106,5 +102,3 @@ module Enumerable
     def multiply_els ; self.my_inject {|result, element| result * element} ; end
     
 end
-
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
